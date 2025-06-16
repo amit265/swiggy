@@ -12,27 +12,27 @@ import Cart from "./components/Cart.jsx";
 
 const appRouter = createBrowserRouter([
   {
-    path: "/projects/react/swiggy/",
+    path: "/swiggy/",
     element: <App />,
     children: [
       {
-        path: "/projects/react/swiggy/",
+        path: "/swiggy/",
         element: <Body />,
       },
       {
-        path: "/projects/react/swiggy/about",
+        path: "/swiggy/about",
         element: <About />,
       },
       {
-        path: "/projects/react/swiggy/contact",
+        path: "/swiggy/contact",
         element: <Contact />,
       },
       {
-        path: "/projects/react/swiggy/:resId",
+        path: "/swiggy/:resId",
         element: <ResDetail />,
       },
       {
-        path: "/projects/react/swiggy/cart",
+        path: "/swiggy/cart",
         element: <Cart />,
       },
     ],
