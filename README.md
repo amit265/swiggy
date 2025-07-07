@@ -24,8 +24,8 @@ This is a Swiggy Clone app built with React. It lists restaurants using the Swig
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/amit265/React-Projects.git
-   cd react-projects/swiggy-app
+   git clone https://github.com/amit265/swiggy.git
+   cd react-projects/swiggy
    ```
 
 2. Install dependencies:

@@ -11,6 +11,7 @@ const ResDetail = () => {
   const { resInfo, loading, error } = useResAPI(SWIGGY_RES_API + resId);
   const [showIndex, setShowIndex] = useState(null);
 
+  
 
   if (resInfo === null)
     return (
@@ -40,7 +41,6 @@ const ResDetail = () => {
             Mozilla : CORS Everywhere
           </a>
         </div>
-        <ShimmerRes />
       </>
     );
 
@@ -90,7 +90,7 @@ const ResDetail = () => {
       <div className="mt-8 p-4 rounded-lg w-10/12 sm:w-1/2 mx-auto shadow-lg">
         <div className="flex justify-between">
           <h1 className="mx-4 p-4 text-xl text-black font-bold">Main Menu</h1>
-          <Link to={BASE_URL + "/"}>
+          <Link to={"/"}>
             <h2 className="mx-4 p-4 shadow-lg font-bold text-red-600 hover:bg-gray-300">
               Go to Restaurant
             </h2>

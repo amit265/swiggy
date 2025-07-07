@@ -24,14 +24,12 @@ const Cart = () => {
   }, [cartItems]); // Recalculate total price when cart items change
 
   const handleClearCart = () => {
-    if(confirm("This will delete everything from your cart, are you sure?")){
-    dispatch(clearCard());
+    if (confirm("This will delete everything from your cart, are you sure?")) {
+      dispatch(clearCard());
     }
-
   };
 
   const handlePurchase = () => {
-   
     setMessage(
       `Congratulations, Your order is placed, you should receive your package withinn thirty minutes`
     );
@@ -48,7 +46,7 @@ const Cart = () => {
         {cartItems.length === 0 ? (
           <div className="shadow-lg flex flex-col items-center">
             <h1 className="mt-4 p-4">Your cart is empty</h1>
-            <Link to={BASE_URL + "/"}>
+            <Link to={"/"}>
               <h2 className="p-4 font-bold text-red-600 hover:bg-gray-200 ">
                 Go to Restaurant
               </h2>
@@ -84,7 +82,7 @@ const Cart = () => {
               </button>
             </div>
             <div>
-              <Link to={BASE_URL + "/"}>
+              <Link to={"/"}>
                 <h2 className="text-center p-4 shadow-lg font-bold text-green-500">
                   Shop more
                 </h2>
@@ -94,10 +92,7 @@ const Cart = () => {
         )}
       </div>
       {showMessage && (
-        <FlashMessage
-          message={message}
-          onClose={() => setShowMessage(false)}
-        />
+        <FlashMessage message={message} onClose={() => setShowMessage(false)} />
       )}
     </div>
   );

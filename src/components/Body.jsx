@@ -126,7 +126,7 @@ const Body = () => {
 
       <div className="flex flex-wrap gap-4 w-full justify-center">
         {filteredResList.map((res) => (
-          <Link key={res.info.id} to={BASE_URL + "/" + res.info.id}>
+          <Link key={res.info.id} to={"/" + res.info.id}>
             <Card data={res} />
           </Link>
         ))}

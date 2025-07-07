@@ -3,8 +3,7 @@ import logo from "../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useSelector } from "react-redux";
-import { BASE_URL } from "../utils/constants";
-import hamMenu from "../../public/menu.png";
+import hamMenu from "/menu.png";
 
 const Header = () => {
   const [login, setLogin] = useState("Login");
@@ -37,13 +36,13 @@ const Header = () => {
             {hamMenuIcon && "Online Status: "} {onlineStatus ? "💚" : "💔"}
           </li>
           <li onClick={hamMenuSetFalse} className="hover:bg-gray-400 hover:text-white p-2 rounded-lg hover:shadow-lg">
-            <Link to={BASE_URL + "/"}>Home</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li onClick={hamMenuSetFalse} className="hover:bg-gray-400 p-2 hover:text-white rounded-lg hover:shadow-lg">
-            <Link to={BASE_URL + "/about"}>About</Link>
+            <Link to={"/about"}>About</Link>
           </li>
           <li onClick={hamMenuSetFalse} className="hover:bg-gray-400 p-2 hover:text-white rounded-lg hover:shadow-lg">
-            <Link to={BASE_URL + "/contact"}>Contact</Link>
+            <Link to={"/contact"}>Contact</Link>
           </li>
           <li
             className="hover:bg-gray-400 hover:text-white cursor-pointer p-2 rounded-lg hover:shadow-lg "
@@ -55,7 +54,7 @@ const Header = () => {
             {login}
           </li>
           <li className="hover:bg-gray-400 p-2 hover:text-white rounded-lg hover:shadow-lg font-bold text-xl">
-            <Link onClick={hamMenuSetFalse} className="relative inline-block" to={BASE_URL + "/cart"}>
+            <Link onClick={hamMenuSetFalse} className="relative inline-block" to={"/cart"}>
               <div className="w-10">
                 <img
                   className="w-full bg-red-800 rounded-lg"
